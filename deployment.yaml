@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudnative-pg-test
+  namespace: default
+spec:
+  replicas: 1  
+  selector:
+    matchLabels:
+      app: cloudnative-pg-test
+  template:
+    metadata:
+      labels:
+        app: cloudnative-pg-test  
+    spec:
+      containers:
+      - name: cloudnative-pg-test  
+        image: jokesta/pg:latest

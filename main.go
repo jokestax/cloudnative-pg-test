@@ -66,6 +66,8 @@ func main() {
 		}
 	}
 
+	connStr = "postgresql://app:XgOlO0jRn8fuNkYzFG9w75SH6bTkXIKEycFpj2brSzLWRqGUhmlSo31Sm7NxkcFd@cluster-example-rw.default.svc.cluster.local:5432/app"
+
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatalf("Failed to connect to the database: %v", err)
